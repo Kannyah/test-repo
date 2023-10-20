@@ -17,7 +17,7 @@ jobs:
 
     
   changeApproval:
-    name: ServiceNow Change Approvala
+    name: ServiceNow Change Approvalw
     needs: build
     runs-on: ubuntu-latest
 
@@ -30,7 +30,7 @@ jobs:
           instance-url: ${{ secrets.SN_INSTANCE_URL }}
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
-          job-name: 'ServiceNow Change Approvala'
+          job-name: 'ServiceNow Change Approvalw'
           change-request: '{"setCloseCode":"true","attributes":{"short_description":"Automated Software Deployment","description":"Automated Software Deployment."}}'
           interval: '100'
           timeout: '3600'
