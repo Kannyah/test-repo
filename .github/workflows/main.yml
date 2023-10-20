@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:     
-      - name: ServiceNow Change Approval
+      - name: ServiceNow Change Approvala
         uses: ServiceNow/servicenow-devops-change@v1.34.2
         with:
           devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
@@ -30,7 +30,7 @@ jobs:
           instance-url: ${{ secrets.SN_INSTANCE_URL }}
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
-          job-name: 'ServiceNow Change Approval'
+          job-name: 'ServiceNow Change Approvala'
           change-request: '{"setCloseCode":"true","attributes":{"short_description":"Automated Software Deployment","description":"Automated Software Deployment."}}'
           interval: '100'
           timeout: '3600'
