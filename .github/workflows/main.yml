@@ -17,12 +17,12 @@ jobs:
 
     
   changeApproval:
-    name: ServiceNow Change Approval
+    name: ServiceNow Change Approvala
     needs: build
     runs-on: ubuntu-latest
 
     steps:     
-      - name: ServiceNow Change Approvala
+      - name: ServiceNow Change Approval
         uses: ServiceNow/servicenow-devops-change@v1.34.2
         with:
           devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
