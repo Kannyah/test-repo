@@ -19,4 +19,4 @@ jobs:
           instance-url: ${{ secrets.SN_INSTANCE_URL }}
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
-          change-details: '{"build_number":"6591194141/attempts/1","pipeline_name":"Kannyah/test-repo/main","stage_name":"ServiceNow Change Approvalw"}'
+          change-details: '{"build_number":"6591194141","pipeline_name":"Kannyah/test-repo/main","stage_name":"ServiceNow Change Approvalw"}'
