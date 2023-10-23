@@ -1,0 +1,22 @@
+name: getchange
+
+
+on:
+  workflow_dispatch:
+    
+
+jobs:
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:     
+      - name: ServiceNow Get Change
+        uses: ServiceNow/servicenow-devops-get-change@v2.0.0
+        with:
+          devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
+          devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
+          instance-url: ${{ secrets.SN_INSTANCE_URL }}
+          tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
+          context-github: ${{ toJSON(github) }}
+          change-details: '{"build_number":"6591194141/attempts/1","pipeline_name":"CI_Pipeline","Kannyah/test-repo/main":"ServiceNow Change Approvalw"}'
