@@ -18,5 +18,8 @@ jobs:
           devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
           instance-url: ${{ secrets.SN_INSTANCE_URL }}
           context-github: ${{ toJSON(github) }}
-          change-request-number: 'CHG0037165'
-          change-request-details: '{"short_description":"Automated Software Deployment","description":"Automated Software Deployment.","implementation_plan":"Software update is tested and results can be found in Test Summaries Tab; When the change is approved the implementation happens automated by the CICD pipeline within the change planned start and end time window.","backout_plan":"When software fails in production, the previous software release will be re-deployed.","test_plan":"Testing if the software was successfully deployed"}'
+          tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
+          stage-name: 'ServiceNow Change Approvalw'
+          build-number: '6591194141'
+          attempt-number: '1'
+          pipeline-name: 'Kannyah/test-repo/main'
