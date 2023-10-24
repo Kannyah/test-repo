@@ -8,10 +8,10 @@ on:
 jobs:
 
   deploy:
-    name: Deploy
+    name: ServiceNow Change Approvalw
     runs-on: ubuntu-latest
     steps:     
-      - name: ServiceNow Get Change
+      - name: ServiceNow Change Approval
         uses: ServiceNow/servicenow-devops-get-change@v2.0.0
         with:
           devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
