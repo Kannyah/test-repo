@@ -34,12 +34,3 @@ jobs:
           change-request: '{"setCloseCode":"true","attributes":{"short_description":"Automated Software Deployment","description":"Automated Software Deployment."}}'
           interval: '100'
           timeout: '3600'
-    
-  deploy:
-    name: Deploy
-    needs: changeApproval
-    runs-on: ubuntu-latest
-
-    steps:     
-      - name: Run Deployment Script
-        run: echo "Deployment Finished....."
